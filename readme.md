@@ -8,11 +8,11 @@ Crie cenários de testes baseados no protótipo informado.
 ###### Caso 1:
 **# language:** pt-br
 
-**Cenário:** Abrir a rede social ao clicar no ícone correspondente
-	**Dado** que o usuário tem acesso aos campos em ‘Informações Gerais’ 
-	**E** que esteja devidamente configurado cada rede social com um link válido
-	**Quando** clicar no <icone > da rede social
-	**Então** deve abrir uma nova guia no navegador redirecionando ao <link> 
+**Cenário:** Abrir a rede social ao clicar no ícone correspondente  
+	**Dado** que o usuário tem acesso aos campos em ‘Informações Gerais’   
+	**E** que esteja devidamente configurado cada rede social com um link válido  
+	**Quando** clicar no <icone > da rede social  
+	**Então** deve abrir uma nova guia no navegador redirecionando ao <link>   
 
 	**Exemplo:**
 	|      icone            |			link 				|
