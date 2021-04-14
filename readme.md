@@ -1,50 +1,50 @@
 # Totvs Quality Assurance Challenge
 Projeto para o desafio da Totvs de QA.
 
-## 1 - Cenários de Testes
+## 1 - CenÃ¡rios de Testes
 
-Crie cenários de testes baseados no protótipo informado.
+Crie cenÃ¡rios de testes baseados no protÃ³tipo informado.
 
 ###### Caso 1:
 **# language:** pt-br
 
-**Cenário:** Abrir a rede social ao clicar no ícone correspondente  
-	**Dado** que o usuário tem acesso aos campos em ‘Informações Gerais’   
-	**E** que esteja devidamente configurado cada rede social com um link válido  
+**CenÃ¡rio:** Abrir a rede social ao clicar no Ã­cone correspondente  
+	**Dado** que o usuÃ¡rio tem acesso aos campos em â€˜InformaÃ§Ãµes Geraisâ€™   
+	**E** que esteja devidamente configurado cada rede social com um link vÃ¡lido  
 	**Quando** clicar no <icone > da rede social  
-	**Então** deve abrir uma nova guia no navegador redirecionando ao <link>   
+	**EntÃ£o** deve abrir uma nova guia no navegador redirecionando ao <link>   
 
 	**Exemplo:**
-	|      icone            |			link				|
-	|     (WhatsApp)        |  https://web.whatsapp.com/…	|
-	|     (Facebook)        |  http://www.facebook.com/…	|
-	|     (Instagram)       |  https://www.instagram.com/…	|
-	|     (Twitter)         |  https://twitter.com/home/…	|
-	|     (Linkedin)        |  https://br.linkedin.com/…	|
+	|      icone            |		link		|
+	|     (WhatsApp)        |  https://web.whatsapp.com/â€¦	|
+	|     (Facebook)        |  http://www.facebook.com/â€¦	|
+	|     (Instagram)       |  https://www.instagram.com/â€¦	|
+	|     (Twitter)         |  https://twitter.com/home/â€¦	|
+	|     (Linkedin)        |  https://br.linkedin.com/â€¦	|
 
 	
 ###### Caso 2:
 **# language:** pt-br
-**Cenário:** Listar todas as oportunidades ao clicar em ‘ver todas as oportunidades’  
+**CenÃ¡rio:** Listar todas as oportunidades ao clicar em â€˜ver todas as oportunidadesâ€™  
     <p>
-	**Dado** que o usuário tem acesso ao campo ‘Oportunidades’   
-    **E** que já tenha oportunidades cadastradas  
-    **Quando** clicar na opção ‘ver todas as oportunidades’  
-    **Então** deve aumentar o campo de oportunidades e listar todas as disponíveis.  
+	**Dado** que o usuÃ¡rio tem acesso ao campo â€˜Oportunidadesâ€™   
+    **E** que jÃ¡ tenha oportunidades cadastradas  
+    **Quando** clicar na opÃ§Ã£o â€˜ver todas as oportunidadesâ€™  
+    **EntÃ£o** deve aumentar o campo de oportunidades e listar todas as disponÃ­veis.  
 	<p>
 	
 	
 ###### Caso 3:
-**Cenário:** Abrir Google Maps ao clicar no local  
-	**Dado** que o usuário tem acesso ao campo ‘Local’  
-	**E** que já tenha um endereço preenchido neste campo  
+**CenÃ¡rio:** Abrir Google Maps ao clicar no local  
+	**Dado** que o usuÃ¡rio tem acesso ao campo â€˜Localâ€™  
+	**E** que jÃ¡ tenha um endereÃ§o preenchido neste campo  
 	**Quando** clicar no minimapa   
-	**Então** deve abrir o Google Maps já carregado com o ponto de interesse com o endereço cadastrado.
+	**EntÃ£o** deve abrir o Google Maps jÃ¡ carregado com o ponto de interesse com o endereÃ§o cadastrado.
 
 	
 ###### Caso 4:
-**Cenário:** Cadastrar nova atividade    
-	**Dado** que o usuário tem acesso ao campo ‘Atividade’    
-	**E** que tenha permissão para cadastrar novas atividades    
-	**Quando** clicar no ícone correspondente     
-	**Então** deve abrir uma nova tela para cadastro de uma nova atividade    
+**CenÃ¡rio:** Cadastrar nova atividade    
+	**Dado** que o usuÃ¡rio tem acesso ao campo â€˜Atividadeâ€™    
+	**E** que tenha permissÃ£o para cadastrar novas atividades    
+	**Quando** clicar no Ã­cone correspondente     
+	**EntÃ£o** deve abrir uma nova tela para cadastro de uma nova atividade    
