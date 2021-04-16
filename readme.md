@@ -3,7 +3,7 @@ Projeto para o desafio da Totvs de QA.
 
 ## 1 - Cenarios de Testes
 
-Criado os cenarios de testes baseados no prototipo informado, o conforme o arquivo [casoTestes.txt] (https://github.com/vagner-carmo/challenge-totvs/blob/master/CasoTestes.txt)
+Criado os cenarios de testes baseados no prototipo informado, o conforme o arquivo: [casoTestes.txt](https://github.com/vagner-carmo/challenge-totvs/blob/master/CasoTestes.txt)
 
 
 	
@@ -11,11 +11,11 @@ Criado os cenarios de testes baseados no prototipo informado, o conforme o arqui
 
 Nesse desafio eu utilizei o Cypress, que e um Framework Javascript para automacao de testes end-to-end.
 
-Os arquivos para esse desafio estão dentro da pasta [front] (https://github.com/vagner-carmo/challenge-totvs/tree/master/front).
+Os arquivos para esse desafio estão dentro da pasta [front](https://github.com/vagner-carmo/challenge-totvs/tree/master/front).
 
-A primeira parte consiste em uma automacao que clica no botão “Start”, aguarda pelo carregamento do elemento e faz uma validação se o texto “Hello World!” foi apresentado, arquivo [challenge2.1.spec.js] (https://github.com/vagner-carmo/challenge-totvs/blob/master/front/cypress/integration/challenge2.1.spec.js)
+A primeira parte consiste em uma automacao que clica no botão “Start”, aguarda pelo carregamento do elemento e faz uma validação se o texto “Hello World!” foi apresentado, arquivo: [challenge2.1.spec.js](https://github.com/vagner-carmo/challenge-totvs/blob/master/front/cypress/integration/challenge2.1.spec.js)
 
-A segunda parte consiste em uma automação que clica nos tres botoes apresentados em tela, na sequencia clica em todos os botoes “edit” e depois em todos os botoes “delete” da grid, arquivo [challenge2.2.spec.js] (https://github.com/vagner-carmo/challenge-totvs/blob/master/front/cypress/integration/challenge2.2.spec.js)
+A segunda parte consiste em uma automação que clica nos tres botoes apresentados em tela, na sequencia clica em todos os botoes “edit” e depois em todos os botoes “delete” da grid, arquivo: [challenge2.2.spec.js](https://github.com/vagner-carmo/challenge-totvs/blob/master/front/cypress/integration/challenge2.2.spec.js)
 
 
 
@@ -23,4 +23,6 @@ A segunda parte consiste em uma automação que clica nos tres botoes apresentad
 
 Nesse desafio utilizei o Postman para criar uma collection de testes, onde validei o GET, POST, PUT e DELETE da API.
 
-Tambem implementei os testes automatizados validando se e um JSON e um schema valido e se o codigo da resposta esta conforme o esperado 
+Tambem implementei os testes automatizados validando se e um JSON e um schema valido e se o codigo da resposta esta conforme o esperado.
+
+Conforme arquivo: [challenge.postman_collection.json](https://github.com/vagner-carmo/challenge-totvs/blob/master/back/challenge.postman_collection.json)
