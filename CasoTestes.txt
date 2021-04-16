@@ -1,10 +1,3 @@
-# Totvs Quality Assurance Challenge
-Projeto para o desafio da Totvs de QA.
-
-## 1 - Cenarios de Testes
-
-Crie cenarios de testes baseados no prototipo informado.
-
 ###### Caso 1:
 **# language:** pt-br
 
@@ -50,18 +43,4 @@ Crie cenarios de testes baseados no prototipo informado.
 	**Dado** que o usuario tem acesso ao campo 'Atividade'     
 	**E** que tenha permissão para cadastrar novas atividades    
 	**Quando** clicar no icone correspondente     
-	**Entao** deve abrir uma nova tela para cadastro de uma nova atividade    
-
-	
-## 2 - Automação de 2 funcionalidades front-end
-
-Nesse desafio eu utilizei o Cypress, que e um Framework Javascript para automacao de testes end-to-end.
-
-Os arquivos para esse desafio estão dentro da pasta **front**, mais especificamente os arquivos **challenge2.1.spec.js** e **challenge2.2.spec.js** que estão no caminho \front\cypress\integration
-
-
-## 3 - Automação de 1 funcionalidade back-end
-
-Nesse desafio utilizei o Postman para criar uma collection de testes, onde validei o GET, POST, PUT e DELETE da API.
-
-Tambem implementei os testes automatizados validando se e um JSON e um schema valido e se o codigo da resposta esta conforme o esperado 
+	**Entao** deve abrir uma nova tela para cadastro de uma nova atividade   

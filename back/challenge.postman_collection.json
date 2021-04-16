@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "ba0f6afd-7715-4366-aa27-9a5b11ce89df",
+		"name": "challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User By Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Test #01 - Validando se e um Json\r",
+							"pm.test(\"Validando se a resposta e um Json\", ()=> {\r",
+							"    pm.response.to.be.json;\r",
+							"\r",
+							"});\r",
+							"\r",
+							"//Test #02 - Validando se o schema e valido\r",
+							"const schema = {\r",
+							"    \"type\": \"object\", \"properties\": {\r",
+							"        \"id\": {\"type\": \"number\"},\r",
+							"        \"name\": {\"type\": \"string\"},\r",
+							"        \"username\": {\"type\": \"string\"},\r",
+							"        \"email\": {\"type\": \"string\"},\r",
+							"        \"address\": {\r",
+							"            \"type\": \"object\",\r",
+							"            \"properties\": {\r",
+							"                \"street\": {\"type\": \"string\"},\r",
+							"                \"suite\": {\"type\": \"string\"},\r",
+							"                \"city\": {\"type\": \"string\"},\r",
+							"                \"zipcode\": {\"type\": \"string\"},\r",
+							"                \"geo\": {\r",
+							"                    \"type\": \"object\", \"properties\": {\r",
+							"                        \"lat\": {\"type\": \"string\"},\r",
+							"                        \"lng\": {\"type\": \"string\"}\r",
+							"                    }\r",
+							"                }\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": {\"type\": \"string\"},\r",
+							"        \"website\": {\"type\": \"string\"},\r",
+							"        \"company\": {\r",
+							"            \"type\": \"object\", \"properties\": {\r",
+							"                \"name\": {\"type\": \"string\"},\r",
+							"                \"catchPhrase\": {\"type\": \"string\"},\r",
+							"                \"bs\": {\"type\": \"string\"}\r",
+							"            }\r",
+							"        }\r",
+							"    }\r",
+							"};\r",
+							"pm.test('Validando se o Schema e valido', ()=> {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"//Validando se o codigo retornado e 200 (OK)\r",
+							"pm.test(\"Validando se o status code e 200\", () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/users/1",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Test #01 - Validando se é um Json\r",
+							"var response_body = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Validando se a resposta e um Json\", ()=> {\r",
+							"    pm.response.to.be.json;\r",
+							"\r",
+							"});\r",
+							"\r",
+							"//Test #02 - Validando se o schema e valido\r",
+							"const schema = { \r",
+							"    \"type\": \"array\", \"properties\": {\r",
+							"        \"id\": {\"type\": \"number\"},\r",
+							"        \"name\": {\"type\": \"string\"},\r",
+							"        \"username\": {\"type\": \"string\"},\r",
+							"        \"email\": {\"type\": \"string\"},\r",
+							"        \"address\": {\r",
+							"            \"type\": \"array\", \"properties\": {\r",
+							"                \"street\": {\"type\": \"string\"},\r",
+							"                \"suite\": {\"type\": \"string\"},\r",
+							"                \"city\": {\"type\": \"string\"},\r",
+							"                \"zipcode\": {\"type\": \"string\"},\r",
+							"                \"geo\": {\r",
+							"                    \"type\": \"array\",\r",
+							"                    \"properties\": {\r",
+							"                        \"lat\": {\"type\": \"string\"},\r",
+							"                        \"lng\": {\"type\": \"string\"}\r",
+							"                    }\r",
+							"                }\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": {\"type\": \"string\"},\r",
+							"        \"website\": {\"type\": \"string\"},\r",
+							"        \"company\": {\r",
+							"            \"type\": \"array\", \"properties\": {\r",
+							"                \"name\": {\"type\": \"string\"},\r",
+							"                \"catchPhrase\": {\"type\": \"string\"},\r",
+							"                \"bs\": {\"type\": \"string\"}\r",
+							"            }\r",
+							"        }\r",
+							"    }\r",
+							"};\r",
+							"pm.test('Validando se o Schema e valido', ()=> {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"//Validando se o codigo retornado e 200 (OK)\r",
+							"pm.test(\"Validando se o status code e 200\", () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/users/",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Test #01 - Validando se e um Json\r",
+							"pm.test(\"Validando se a resposta e um Json\", ()=> {\r",
+							"    pm.response.to.be.json;\r",
+							"\r",
+							"});\r",
+							"\r",
+							"//Test #02 - Validando se o schema e valido\r",
+							"const schema = {\r",
+							"    \"type\": \"object\", \"properties\": {\r",
+							"        \"id\": {\"type\": \"number\"},\r",
+							"        \"name\": {\"type\": \"string\"},\r",
+							"        \"username\": {\"type\": \"string\"},\r",
+							"        \"email\": {\"type\": \"string\"},\r",
+							"        \"address\": {\r",
+							"            \"type\": \"object\", \"properties\": {\r",
+							"                \"street\": {\"type\": \"string\"},\r",
+							"                \"suite\": {\"type\": \"string\"},\r",
+							"                \"city\": {\"type\": \"string\"},\r",
+							"                \"zipcode\": {\"type\": \"string\"},\r",
+							"                \"geo\": {\r",
+							"                    \"type\": \"object\",\r",
+							"                    \"properties\": {\r",
+							"                        \"lat\": {\"type\": \"string\"},\r",
+							"                        \"lng\": {\"type\": \"string\"}\r",
+							"                    }\r",
+							"                }\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": {\"type\": \"string\"},\r",
+							"        \"website\": {\"type\": \"string\"},\r",
+							"        \"company\": {\r",
+							"            \"type\": \"object\", \"properties\": {\r",
+							"                \"name\": {\"type\": \"string\"},\r",
+							"                \"catchPhrase\": {\"type\": \"string\"},\r",
+							"                \"bs\": {\"type\": \"string\"}\r",
+							"            }\r",
+							"        }\r",
+							"    }\r",
+							"};\r",
+							"pm.test('Validando se o Schema e valido', ()=> {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"//Validando se o codigo retornado e 201 (Created)\r",
+							"pm.test(\"Validando se o status code e 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"\", \r\n\"name\":\"Teste\",\r\n\"username\": \"teste.teste\",\r\n\"email\": \"test@teste.com\",\r\n\"address\": {\r\n    \"street\": \"Street Test\",\r\n    \"suite\": \"Suite 777\",\r\n    \"city\": \"Testown\",\r\n    \"zipcode\": \"7777-777\",\r\n    \"geo\": {\r\n        \"lat\": \"-77.7777\",\r\n        \"lng\": \"77.7777\"\r\n      }\r\n    },\r\n    \"phone\": \"777-777-7777\",\r\n    \"website\": \"teste.net\",\r\n    \"company\": {\r\n      \"name\": \"Test LLC\",\r\n      \"catchPhrase\": \"Tester is the test.\",\r\n      \"bs\": \"test end-to-end models\"\r\n      }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/users/",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Test #01 - Validando se e um Json\r",
+							"pm.test(\"Validando se a resposta e um Json\", ()=> {\r",
+							"    pm.response.to.be.json;\r",
+							"\r",
+							"});\r",
+							"\r",
+							"//Test #02 - Validando se o schema e valido\r",
+							"const schema = {\r",
+							"    \"type\": \"object\", \"properties\": {\r",
+							"        \"id\": {\"type\": \"number\"},\r",
+							"        \"name\": {\"type\": \"string\"},\r",
+							"        \"username\": {\"type\": \"string\"},\r",
+							"        \"email\": {\"type\": \"string\"},\r",
+							"        \"address\": {\r",
+							"            \"type\": \"object\", \"properties\": {\r",
+							"                \"street\": {\"type\": \"string\"},\r",
+							"                \"suite\": {\"type\": \"string\"},\r",
+							"                \"city\": {\"type\": \"string\"},\r",
+							"                \"zipcode\": {\"type\": \"string\"},\r",
+							"                \"geo\": {\r",
+							"                    \"type\": \"object\", \"properties\": {\r",
+							"                        \"lat\": {\"type\": \"string\"},\r",
+							"                        \"lng\": {\"type\": \"string\"}\r",
+							"                    }\r",
+							"                }\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": {\"type\": \"string\"},\r",
+							"        \"website\": {\"type\": \"string\"},\r",
+							"        \"company\": {\r",
+							"            \"type\": \"object\", \"properties\": {\r",
+							"                \"name\": {\"type\": \"string\"},\r",
+							"                \"catchPhrase\": {\"type\": \"string\"},\r",
+							"                \"bs\": {\"type\": \"string\"}\r",
+							"            }\r",
+							"        }\r",
+							"    }\r",
+							"};\r",
+							"pm.test('Validando se o Schema e valido', ()=> {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"//Validando se o codigo retornado e 200 (OK)\r",
+							"pm.test(\"Validando se o status code e 200\", () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"\", \r\n\"name\":\"Teste 2222\",\r\n\"username\": \"teste.teste\",\r\n\"email\": \"test@teste.com\",\r\n\"address\": {\r\n    \"street\": \"Street Test\",\r\n    \"suite\": \"Suite 777\",\r\n    \"city\": \"Testown\",\r\n    \"zipcode\": \"7777-777\",\r\n    \"geo\": {\r\n        \"lat\": \"-77.7777\",\r\n        \"lng\": \"77.7777\"\r\n      }\r\n    },\r\n    \"phone\": \"777-777-7777\",\r\n    \"website\": \"teste.net\",\r\n    \"company\": {\r\n      \"name\": \"Test LLC\",\r\n      \"catchPhrase\": \"Tester is the test.\",\r\n      \"bs\": \"test end-to-end models\"\r\n      }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/users/1",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Test #01 - Validando se é um Json\r",
+							"var response_body = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Validando se a resposta e um Json\", ()=> {\r",
+							"    pm.response.to.be.json;\r",
+							"\r",
+							"});\r",
+							"\r",
+							"//Validando se o codigo retornado e 200 (OK)\r",
+							"pm.test(\"Validando se o status code e 200\", () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/users/1",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
