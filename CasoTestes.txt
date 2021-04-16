@@ -12,10 +12,10 @@ Cenario: Cadastrar nova atividade
 # language: pt-br
 
 Cenario: Listar todas as oportunidades ao clicar em 'ver todas as oportunidades'  
-	Dado que o usuario tem acesso ao campo 'Oportunidades'  
-    E que ja tenha oportunidades cadastradas  
-    Quando clicar na opcao 'ver todas as oportunidades'   
-    Entao deve aumentar o campo de oportunidades e listar todas as disponiveis  
+	Dado que o usuario tem acesso ao campo 'Oportunidades'
+	E que ja tenha oportunidades cadastradas
+	Quando clicar na opcao 'ver todas as oportunidades'   
+	Entao deve aumentar o campo de oportunidades e listar todas as disponiveis  
 	
 	
 ###### Caso 3:
