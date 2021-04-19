@@ -1,5 +1,5 @@
-# Totvs Quality Assurance Challenge
-Projeto para o desafio da Totvs de QA.
+# TOTVS Quality Assurance Challenge
+Projeto para o desafio da TOTVS de QA.
 
 ## 1 - Cenários de Testes
 
