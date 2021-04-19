@@ -38,9 +38,9 @@ Também implementei os testes automatizados validando se é um JSON e um schema 
 
 Conforme arquivo: [challenge.postman_collection.json](https://github.com/vagner-carmo/challenge-totvs/blob/master/back/challenge.postman_collection.json)
 
-No Postman selecione o menu File -> Import
-Selecione a aba File e clique no botão “Upload Files”
-Navegue até o diretório onde você salvou o arquivo e selecione-o
-Clique no botão Import
+No Postman selecione o menu File -> Import  
+Selecione a aba File e clique no botão “Upload Files”  
+Navegue até o diretório onde você salvou o arquivo e selecione-o  
+Clique no botão Import  
 
 Ao clicar em “Send” em cada requisição será retornado conteúdo no campo “Body” e no campo “Test Results”
